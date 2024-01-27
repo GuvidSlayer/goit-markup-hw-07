@@ -29,7 +29,7 @@ body {
 }
 
 .container {
-    max-width: 480px;
+    max-width: 479px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -79,6 +79,8 @@ body {
 }
 
 .mobile-navigation .link,
+.mobile-address .link,
+.mobile-navigation .link,
 .mobile-address .link {
     font-family: Roboto;
     font-size: 36px;
@@ -94,7 +96,7 @@ body {
     flex-direction: column;
 }
 
-#mobile-tel {
+#mobile-mail {
     color: var(--IRIS);
     font-family: Roboto;
     font-size: 36px;
@@ -105,7 +107,7 @@ body {
     text-transform: capitalize;
 }
 
-#mobile-mail {
+#mobile-tel {
     color: var(--SLATE);
     font-size: 20px;
     font-style: normal;
@@ -184,7 +186,6 @@ body {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding: 24px 0;
 }
 
 .is-active {
@@ -219,7 +220,6 @@ ul {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .list-item-adv {
@@ -406,13 +406,11 @@ img {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .client {
     width: calc((100% - 24px) / 2);
     height: 88px;
-    flex-shrink: 0;
 }
 
 .icon-client-link {
@@ -425,12 +423,10 @@ img {
     align-items: center;
     color: var(--LIGHTSLATE);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    flex-shrink: 0;
 }
 
 .icon-client {
     fill: currentColor;
-    flex-shrink: 0;
 }
 
 .icon-client-link:hover,
@@ -440,14 +436,30 @@ img {
    color: var(--OCEAN);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .footer-flex {
     display: flex;
     align-items: baseline;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
     row-gap: 72px;
-    column-gap: 24px;
+    column-gap: 120px;
 }
 
 .list-footmedia {
@@ -494,12 +506,24 @@ img {
     color: #FFFFFF;
     margin-bottom: 16px;
     margin-top: 0;
-    text-align: center;
 }
 
 .section-portfolio {
     padding: 48px 0 48px 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .filter-buttons {
     display: flex;
@@ -543,7 +567,6 @@ img {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    justify-content: center;
 }
 
 .list-item-ex-link {
@@ -562,7 +585,7 @@ transform: translateY(0%);
 }
 
 .list-item-ex {
-    max-width: 360px;
+    width: 100%;
 }
 
 .example {
@@ -626,19 +649,17 @@ transform: translateY(0%);
 
 .link-footer {
     display: inline-block;
-    margin: 0 auto 16px auto;
+    margin-bottom: 16px;
 }
 
 .form-subscribe {
     display: flex;
     gap: 24px;
     flex-direction: column;
-    align-items: center;
 }
 
 .form-subscribe-input {
-    width: calc(100vw - 30px);
-    max-width: 398px;
+    width: 264px;
     height: 40px;
     border: 1px solid var(--WHITE);
     background-color: transparent;
@@ -687,16 +708,6 @@ transform: translateY(0%);
 .button-subscribe:hover,
 .button-subscribe:focus {
     background-color: var(--OCEAN);
-}
-
-.container-footer,
-.container-footmedia,
-.container-footsub {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 480px;
 }
 
 .is-hidden {
@@ -897,30 +908,23 @@ transform: translateY(0%);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 320px) and (max-width: 479px) {
-.container {
-    max-width: 320px;
-}
-        
-.container-footer,
-.container-footmedia,
-.container-footsub {
-    max-width: 320px;
-}
-    
-.client {
-    width: calc(100% - 30px);
-    height: 88px;
-}
-}
 
-@media screen and (min-width: 768px) {
-.section {
-    padding: 120px 0;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
 .container {
-    max-width: 768px;
+    max-width: 767px;
 }
 
 .menu-toggle {
@@ -988,13 +992,15 @@ transform: translateY(0%);
     max-width: calc((100% - 24px) / 2);
 }
 
+.list-clients {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
 .client {
     width: calc((100% - 48px) / 3);
     height: 88px;
-}
-
-.social-media {
-    text-align: left;
 }
 
 .section-portfolio {
@@ -1003,6 +1009,10 @@ transform: translateY(0%);
 
 .filter-buttons {
     justify-content: center;
+}
+
+.list-item-ex {
+    width: calc((100% - 24px) / 2);
 }
 
 .modal-window {
@@ -1015,28 +1025,35 @@ transform: translateY(0%);
     gap: 24px;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: baseline;
-}
-
-.form-subscribe-input {
-    width: 264px;
-}
-
-.container-footer,
-.container-footmedia,
-.container-footsub {
-    display: inline-block;
 }
 }
 
 
-@media screen and (min-width: 1200px) {
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
 .section {
     padding: 120px 0;
 }
 
 .container {
     max-width: 1158px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.list-menu {
+    display: flex;
+    gap: 40px;
 }
 
 .address {
@@ -1057,7 +1074,18 @@ transform: translateY(0%);
 .list-contact {
     display: flex;
     gap: 40px;
-    flex-direction: row;
+}
+
+.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--OCEAN);
+    border-radius: 2px;
+    display: block;
+    width: 100%;
 }
 
 .list-item-adv .heading-third {
@@ -1109,6 +1137,12 @@ transform: translateY(0%);
     max-width: calc((100% - 72px) / 4);
 }
 
+.list-clients {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
 .client {
     width: calc((100% - 120px) / 6);
     height: 88px;
@@ -1122,6 +1156,10 @@ transform: translateY(0%);
     justify-content: center;
 }
 
+.list-item-ex {
+    width: calc((100% - 48px) / 3);
+}
+
 .modal-window {
     width: 408px;
     padding:  72px 24px 24px 24px;
@@ -1133,9 +1171,193 @@ transform: translateY(0%);
     flex-direction: row;
     flex-wrap: nowrap;
 }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1200px) {
+.section {
+    padding: 120px 0;
+}
+
+.container {
+    max-width: 1158px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.list-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.address {
+    font-style: normal;
+    display: block;
+}
+
+.section.advantages {
+    padding: 120px 0 0 0;
+}
+
+.heading-first {
+    font-size: 56px;
+    max-width: 496px;
+    margin: 0 auto 48px auto;
+}
+
+.list-contact {
+    display: flex;
+    gap: 40px;
+}
+
+.is-active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: var(--OCEAN);
+    border-radius: 2px;
+    display: block;
+    width: 100%;
+}
+
+.list-item-adv .heading-third {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.list-advantages {
+    display: flex;
+    gap: 24px;
+}
+
+.list-item-adv {
+    max-width: calc((100% - 72px) / 4);
+}
+
+.icon-adv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: var(--CLOUD);
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.what-we-do {
+    display: flex;
+}
+
+.list-doing {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.list-item-do {
+    max-width: calc((100% - 48px) / 3);
+}
+
+.list-team {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.list-item-team {
+    max-width: calc((100% - 72px) / 4);
+}
+
+.list-clients {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.client {
+    width: calc((100% - 120px) / 6);
+    height: 88px;
+}
+
+.list-footmedia {
+    display: flex;
+    gap: 16px;
+}
+
+.footmedia {
+    height: 40px;
+    width: 40px;
+}
+
+.footmedia-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--IRIS);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footmedia-link:hover,
+.footmedia-link:focus,
+.footmedia-link:active {
+    background-color: var(--GREEN);
+}
+
+.icon-footmedia-fill {
+    fill: var(--CLOUD);
+}
+
+.icon-subscribe {
+    margin-left: 16px;
+    fill: var(--CLOUD);
+}
+
+.section-portfolio {
+    padding: 96px 0 120px 0;
+}
+
+.filter-buttons {
+    justify-content: center;
+}
+
+.list-item-ex {
+    width: calc((100% - 48px) / 3);
+}
+
+.modal-window {
+    width: 408px;
+    padding:  72px 24px 24px 24px;
+}
 
 .footer-flex {
-    column-gap: 100px;
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.form-subscribe {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 }
 
